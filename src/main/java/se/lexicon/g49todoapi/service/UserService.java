@@ -5,14 +5,13 @@ import se.lexicon.g49todoapi.domain.dto.UserDTOView;
 
 public interface UserService {
     //register user(email, password,roles)
-    //Change password
+    UserDTOView register(UserDTOForm dtoForm);
     //Find user by email
+    UserDTOView getByEmail(String email);
     //Disable user by email
+    void disableEmail(String email);
     //Enable user by email
+    void enableEmail(String email);
     //...
 
-    UserDTOView register(UserDTOForm dtoForm);
-    UserDTOView getByEmail(String email);
-    void disableEmail(String email);
-    void enableEmail(String email);
 }
